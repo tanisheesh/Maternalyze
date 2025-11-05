@@ -1,28 +1,28 @@
 # Maternalyze - Pregnancy ML Prediction Portal
-
-<p>
-  <a href="https://fastapi.tiangolo.com/">
-    <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI">
-  </a>
-  <a href="https://python.org/">
-    <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
-  </a>
-  <a href="https://lightgbm.readthedocs.io/en/latest/">
-    <img src="https://img.shields.io/badge/LightGBM-00C853?style=for-the-badge&logo=lightgbm&logoColor=white" alt="LightGBM">
-  </a>
-  <a href="https://pandas.pydata.org/">
-    <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas">
-  </a>
-  <a href="https://numpy.org/">
-    <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy">
-  </a>
-  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
-    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
-  </a>
-  <a href="https://www.chartjs.org/">
-    <img src="https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white" alt="Chart.js">
-  </a>
+<p align="left">
+  <a href="https://fastapi.tiangolo.com/">
+    <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI">
+  </a>
+  <a href="https://python.org/">
+    <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+  </a>
+  <a href="https://lightgbm.readthedocs.io/en/latest/">
+    <img src="https://img.shields.io/badge/LightGBM-00C853?style=for-the-badge&logo=lightgbm&logoColor=white" alt="LightGBM">
+  </a>
+  <a href="https://pandas.pydata.org/">
+    <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas">
+  </a>
+  <a href="https://numpy.org/">
+    <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=NumPy&logoColor=white" alt="NumPy">
+  </a>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
+    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
+  </a>
+  <a href="https://www.chartjs.org/">
+    <img src="https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white" alt="Chart.js">
+  </a>
 </p>
+
 
 ## Overview
 
