@@ -1,8 +1,11 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 from pydantic import BaseModel
 import joblib
 import numpy as np
+import os
 from model_utils import (
     preprocess_gdm_input,
     preprocess_child_input,
@@ -12,9 +15,18 @@ from model_utils import (
 
 app = FastAPI()
 
+# Get the directory paths
+current_dir = os.path.dirname(os.path.abspath(__file__))
+frontend_dir = os.path.join(current_dir, "..", "frontend")
+
+# Mount static files
+app.mount("/static", StaticFiles(directory=frontend_dir), name="static")
+
 origins = [
     "http://127.0.0.1:8080",
-    "http://localhost:8080"
+    "http://localhost:8080",
+    "https://*.onrender.com",
+    "*"  # Allow all origins for now - restrict in production
 ]
 
 app.add_middleware(
@@ -25,8 +37,27 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-gdm_model = joblib.load("../models/gdm_classifier_small.joblib")
-child_model = joblib.load("../models/child_outcome_model_full.joblib")
+import os
+
+# Get the directory of the current file
+current_dir = os.path.dirname(os.path.abspath(__file__))
+models_dir = os.path.join(current_dir, "..", "models")
+
+gdm_model = joblib.load(os.path.join(models_dir, "gdm_classifier_small.joblib"))
+child_model = joblib.load(os.path.join(models_dir, "child_outcome_model_full.joblib"))
+
+
+@app.get("/")
+async def read_root():
+    return FileResponse(os.path.join(frontend_dir, "index.html"))
+
+
+@app.get("/{file_name}")
+async def read_file(file_name: str):
+    file_path = os.path.join(frontend_dir, file_name)
+    if os.path.exists(file_path) and file_name.endswith(('.html', '.css', '.js', '.ico')):
+        return FileResponse(file_path)
+    return {"error": "File not found"}
 
 
 class GDMInput(BaseModel):

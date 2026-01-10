@@ -1,1 +1,4 @@
-const API_BASE_URL = "http://127.0.0.1:8000";
+// Use relative URLs in production, fallback to localhost for development
+const API_BASE_URL = window.location.origin.includes('onrender.com') 
+    ? window.location.origin 
+    : "http://127.0.0.1:8000";
